@@ -1,14 +1,16 @@
-name: Pull request with specific type Workflow
+name: Multiple Branches for Pull Request Workflow
 
 on: 
   pull_request:
-    types:
-      - opened 
-      # reopened again
+    branches:
+      - feature
+      - main
 
 jobs:
-  echo_hello_world:
+  linux:
     runs-on: ubuntu-latest
     steps:
-      - name: print hello world
-        run: echo "Hello World"
+      - name: linux
+        run: |
+          echo "This job is running on an ubuntu runner"
+          echo "Runner OS is $RUNNER_OS"
