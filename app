@@ -1,1 +1,1 @@
-This is new app
+This is a new app
