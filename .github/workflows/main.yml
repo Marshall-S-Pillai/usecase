@@ -1,0 +1,15 @@
+name: Multiple Branches for Pull Request Workflow
+
+on: 
+  push:
+    paths:
+      - app
+
+jobs:
+  linux:
+    runs-on: ubuntu-latest
+    steps:
+      - name: linux
+        run: |
+          echo "This job is running on an ubuntu runner"
+          echo "Runner OS is $RUNNER_OS"
